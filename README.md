@@ -1,4 +1,4 @@
-# 🚀 Optimal Route Planning on a Highway with Electric Vehicles
+# ⚡ Optimal Route Planning on a Highway with Electric Vehicles
 
 ## 📌 Description
 
