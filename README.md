@@ -35,6 +35,7 @@ Given a pair of stations, the goal is to **determine the shortest route with the
   - Each test case consists of:  
     - `open_#.txt` → Input file with commands  
     - `open_#.output.txt` → Expected output file  
+- Additionally, the test folder includes a script for generating new test cases dynamically.
 
 ## 🚀 Technologies Used
 
