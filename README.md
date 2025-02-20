@@ -1,2 +1,45 @@
-# Progetto-API
-Il progetto è strutturato tramite un bst che salva in ogni suo nodo una stazione di servizio e in una lista le corrispondenti autonomie delle auto presenti in ordine decrescente. L'algoritmo del progetto si basa sul cercare dalla stazione di partenza, ovvero un nodo dell'albero l'autonomia massima, se questa è minore o uguale alla distanza necessaria per raggiungere la stazione di servizio d'arrivo questa viene aggiunta alla lista delle tappe. Se l'autonomia massima non soddisfa i requisiti si passa al nodo successivo. L'algoritmo viene eseguito iterativamente e la prima stazione di servizio che raggiunge la stazione di servizio di arrivo diventa la nuova stazione di servizio d'arrivo provvisoria. Si itera l'algoritmo finchè non si collega la stazione di servizio di partenza con quella di arrivo. Ogni tappa viene aggiunta in testa alla lista, cosi che alla fine dell'iterazione la lista sia ordinata in ordine crescente, comprendendo anche la stazione di partenza e di arrivo. Se la stazione di servizio di partenza è maggiore di quella di arrivo si esegue un algoritmo simile, partendo da quella maggiore si va a vedere la stazione massima raggiungibile. Tra quella e quella massima si cerca la stazione che ti porta piu lontano, questa sarà la prima tapa. Si itera cosi fino alla fine. Dopo aver trovato il percorso di verifica che le tappe scelte siano il più vicino possibile all'inizio dell'autostrada (km 0). L'algoritmo assicura il numero minimo di tappe e che le tappe scelte siano il più vicino possibile all'inizio dell'autostrada (km 0).
+#🚀 Optimal Route Planning on a Highway with Electric Vehicles
+
+📌 Description
+
+This project implements an efficient algorithm for optimal route planning on a highway with service stations offering electric vehicles for rent. Given a pair of stations, the goal is to determine the shortest route with the fewest stops, considering vehicle autonomy constraints and prioritizing the shortest distance in case of equivalent routes.
+
+🎯 Objectives
+
+✔️ Minimize the number of stops to reach the destination
+✔️ Ensure the shortest path selection in case of ties
+✔️ Support operations for managing stations and electric vehicles
+
+🏆 Results
+
+✅ Tested on over 100 test cases with flawless results
+✅ High-performance implementation optimized for efficiency
+✅ Final grade: 30/30 with honors in Algorithms & Data Structures
+
+⚙️ Features
+	•	Add and remove service stations
+	•	Manage the fleet of electric vehicles (add, remove)
+	•	Plan the optimal route between two stations
+	•	Parse text files with specific commands
+
+📂 Project Structure
+	•	pathPlanner.c → Implementation of the algorithm and project logic
+	•	test_cases/ → Folder containing multiple test cases for validation
+  	•	Each test case consists of:
+	    •	open_#.txt → Input file with commands
+	    •	open_#.output.txt → Expected output file
+ 
+🚀 Technologies Used
+
+🔹 C language to maximize performance and optimize memory management
+🔹 Graph Search Algorithms Greedy BFS for route planning
+🔹 Data structures for efficient station and vehicle management
+
+🛠️ How to Run the Project
+
+# Compilation
+gcc pathPlanner.c -o pathPlanner
+
+# Execution with an input file
+./pathPlanner < open_#.txt > outputFile
+diff ./open_#.output.txt ./outputFile
