@@ -25,17 +25,17 @@ Given a pair of stations, the goal is to **determine the shortest route with the
 
 - **Add and remove service stations**  
 - **Manage the fleet of electric vehicles** (add, remove)  
-- **Plan the optimal route** between two stations  
+- **Plan the optimal route** between two stations, working in both directions (forward and return)  
 - **Parse text files with specific commands**  
 
 ## 📂 Project Structure
 
-- `pathPlanner.c` → Implementation of the algorithm and project logic  
-- `test_cases/` → Folder containing multiple test cases for validation  
+- [`pathPlanner.c`](pathPlanner.c) → Implementation of the algorithm and project logic  
+- [`test_cases/`](test_cases/) → Folder containing multiple test cases for validation  
   - Each test case consists of:  
     - `open_#.txt` → Input file with commands  
     - `open_#.output.txt` → Expected output file  
-- Additionally, the test folder includes a script for generating new test cases dynamically.
+- Additionally, the [`test_case_generator/`](test_cases/test_case_generator/) folder includes a script for generating new test cases dynamically.
 
 ## 🚀 Technologies Used
 
